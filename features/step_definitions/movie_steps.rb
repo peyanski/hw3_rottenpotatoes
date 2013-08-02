@@ -11,8 +11,11 @@ Given /the following movies exist/ do |movies_table|
 end
 
 # My Shit Starts here
-When /^(?:|I )check "([^"]*)"$/ do |field|
-  check(field)
+When /^(?:|I )check "([^"]*)"$/ do |ratings|
+  ratings.split(',').each do |rating|
+  	debugger
+  	check(field)
+  end
 end
 
 When /^(?:|I )uncheck "([^"]*)"$/ do |field|
