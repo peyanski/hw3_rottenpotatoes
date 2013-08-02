@@ -10,6 +10,18 @@ Given /the following movies exist/ do |movies_table|
   #flunk "Unimplemented"
 end
 
+# My Shit Starts here
+When /^(?:|I )check "([^"]*)"$/ do |field|
+  check(field)
+end
+
+When /^(?:|I )uncheck "([^"]*)"$/ do |field|
+  uncheck(field)
+end
+
+# My Shit Ends here
+
+
 # Make sure that one string (regexp) occurs before or after another one
 #   on the same page
 
