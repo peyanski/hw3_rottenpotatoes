@@ -25,7 +25,7 @@ end
 
 Then /I should not see any of the movies/ do
   rows = page.all('#movies tr').size - 1
-  assert rows == 0
+  assert rows == Movie.count()
 end
 
 Then /I should see all of the movies/ do
